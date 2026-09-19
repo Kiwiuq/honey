@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Пасека «Гнездино» — мёд из деревни Гнездино</title>
+<meta name="description" content="Семейная пасека в Гнездино, основана в 1955 году. История места, история пасеки, фотографии ульев и мёд, который здесь получается.">
+<meta name="theme-color" content="#faf7f0">
+
+<!-- Превью в мессенджерах. Картинка обязательно по полному адресу:
+     с относительным путём Telegram и WhatsApp её не находят. -->
+<meta property="og:title" content="Пасека «Гнездино»">
+<meta property="og:description" content="Откуда этот мёд: место, пасека, пчёлы и люди.">
+<meta property="og:image" content="https://xn----8sbajffdmkxzenp5a.xn--p1ai/img/logo.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+
+<link rel="icon" href="img/favicon-honeycomb.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap нужен только ради сетки (row/col) и иконок. Наш style.css
+     идёт после него и перебивает всё лишнее, так что порядок не менять. -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top">
+
+<a class="skip-link" href="#place">Перейти к содержанию</a>
+
+<main>
+
+  <!-- Первый экран. Сюда попадают по QR-коду с крышки, поэтому первым делом
+       показываем тот же знак, что и на банке. -->
+  <section class="hero" id="hero">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <img class="hero-logo" src="img/logo.jpg" alt="Логотип пасеки «Гнездино»: пчела в сотах, надпись «Сохраняем традиции», основано в 1955" width="180" height="180">
+
+      <h1>Пасека Гнездино</h1>
+      <p class="hero-lede">
+        Если у вас в руках наша банка — вы уже знаете вкус.
+        Здесь расскажем остальное: что это за место, кто держит пасеку
+        и как этот мёд оказался в банке.
+      </p>
+
+      <a class="hero-down" href="#place">
+        <span>С чего всё начинается</span>
+        <i class="bi bi-chevron-down" aria-hidden="true"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Место: короткая история деревни, чтобы дальше был понятен контекст.
+       Раскладка на сетке Bootstrap. Фото справа «прилипает» и стоит на месте,
+       пока рядом прокручивается текст (.photo-sticky в style.css).
+       На телефоне колонки идут друг под другом, а фото поднимается наверх
+       через order в CSS — разметку ради этого не трогаем. -->
+  <section class="place" id="place">
+    <div class="wrap">
+      <div class="row align-items-start gy-4 two-col-row">
+
+        <div class="col-lg-7 col-text">
+          <p class="kicker">История</p>
+          <h2>Деревня Гнездино</h2>
+
+          <p class="lead-in">
+            Гнездино — место старое. Первое упоминание о деревне встречается
+            в писцовых книгах XVI–XVII веков, и с тех пор она почти четыре
+            столетия не выпадает из документов.
+          </p>
+
+          <p>
+            За это время менялись хозяева, дороги и даже название — деревню
+            одно время звали Коратаево. Не менялось только место: луга
+            у реки Тулицы, перелески и поля, которые из поколения в поколение
+            обрабатывали одни и те же семьи.
+          </p>
+
+          <ol class="timeline">
+            <li>
+              <span class="timeline-year">1587–1678</span>
+              <span class="timeline-text">
+                Писцовые книги называют её «деревней Гнездина на реч. Тулице»,
+                Нюховский стан.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-year">1720-е</span>
+              <span class="timeline-text">
+                Гнездино — населённый пункт Тульского уезда. Помещик —
+                Кирилл Елисеевич Крюков.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-year">1857</span>
+              <span class="timeline-text">
+                В сельце при речке Малая (Синяя) Тулица живёт 144 человека.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-year">1859</span>
+              <span class="timeline-text">
+                «Список населённых мест Тульской губернии»: владельческое
+                сельцо Гнездино, оно же Коратаево — 15 дворов, 70 мужчин
+                и 80 женщин. Стоит между Московским трактом и Венёвской
+                дорогой, в 12 километрах от уездного города.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-year">1910–1912</span>
+              <span class="timeline-text">
+                Подворная перепись Торховской волости: 76 дворов и 366 жителей —
+                деревня выросла в пять раз.
+              </span>
+            </li>
+            <li>
+              <span class="timeline-year">Сегодня</span>
+              <span class="timeline-text">
+                Часть сельского поселения Рождественское, Ленинский район.
+              </span>
+            </li>
+          </ol>
+
+          <p>
+            Для большого города это просто цифры. За ними — обычная жизнь:
+            дома, огороды, скот, сенокосы, поля и люди, которые знали свою
+            землю лучше любой карты. Наша пасека — продолжение той же
+            истории, только более свежая её страница.
+          </p>
+        </div>
+
+        <div class="col-lg-5 col-media">
+          <div class="photo photo-place photo-sticky" role="img" aria-label="Дорожный указатель на деревню Гнездино"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Три снимка на сетке: широкий сверху, два высоких по бокам (см. .gallery в style.css). -->
+  <section class="photos" id="photos">
+    <div class="wrap">
+      <div class="row align-items-lg-end gy-2 section-head">
+        <div class="col-lg-7">
+          <p class="kicker">Фотографии</p>
+          <h2>Пасека, ульи и всё, что вокруг</h2>
+        </div>
+        <div class="col-lg-5">
+          <p class="section-note">
+            От ульев в лесу до мёда в банке. Нажмите на снимок, чтобы открыть его крупно.
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <button class="shot shot-tall-left" type="button"
+                data-src="img/gallery/hives-path.jpg"
+                data-caption="Тропинка вдоль ульев, в тени деревьев">
+          <img src="img/gallery/hives-path.jpg"
+               alt="Тропинка вдоль ряда ульев в лесу" loading="lazy">
+          <span class="shot-caption">Тропинка между ульями</span>
+        </button>
+
+        <button class="shot shot-wide" type="button"
+                data-src="img/gallery/hives-closeup.jpg"
+                data-caption="Пчеловод осматривает ульи">
+          <img src="img/gallery/hives-closeup.jpg"
+               alt="Ульи крупным планом, вдали — пчеловод" loading="lazy">
+          <span class="shot-caption">Пчеловод у ульев</span>
+        </button>
+
+        <button class="shot shot-tall-right" type="button"
+                data-src="img/gnezdino.jpg"
+                data-caption="Указатель на въезде в деревню">
+          <img src="img/gnezdino.jpg"
+               alt="Дорожный указатель на деревню Гнездино" loading="lazy">
+          <span class="shot-caption">Деревня Гнездино</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <img src="img/logo.jpg" alt="" width="64" height="64">
+      <div>
+        <p class="footer-name">Пасека «Гнездино»</p>
+        <p class="footer-about">Сохраняем традиции с 1955 года. Мёд качаем и фасуем сами.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p>© <span id="year">2026</span> Пасека «Гнездино» · гнездино-пасека.рф</p>
+  </div>
+</footer>
+
+<!-- Крупный просмотр фото. Скрыт, пока не кликнули по снимку. -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Закрыть">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Предыдущая фотография">&#8249;</button>
+  <figure class="lightbox-figure">
+    <img id="lightbox-img" src="" alt="">
+    <figcaption>
+      <span id="lightbox-caption"></span>
+      <span class="lightbox-count" id="lightbox-count"></span>
+    </figcaption>
+  </figure>
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Следующая фотография">&#8250;</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
