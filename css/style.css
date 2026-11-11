@@ -321,24 +321,27 @@ section {
 
 /* Три снимка: широкий сверху, два высоких по бокам под ним.
    На компьютере они выстраиваются в один ряд — трёхчастная витрина. */
-gallery {
+.gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: clamp(160px, 38vw, 300px);
+  grid-template-rows: clamp(140px, 40vw, 200px) clamp(180px, 50vw, 260px);
+  grid-template-areas:
+    "wide      wide"
+    "tall-left tall-right";
   gap: 8px;
 }
 
+.shot-wide       { grid-area: wide; }
+.shot-tall-left  { grid-area: tall-left; }
+.shot-tall-right { grid-area: tall-right; }
+
 @media (min-width: 721px) {
   .gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-auto-rows: clamp(220px, 22vw, 320px);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: clamp(220px, 26vw, 340px);
+    grid-template-areas: "tall-left wide wide tall-right";
     gap: 12px;
   }
-
-  .shot-wide      { grid-column: span 2; grid-row: span 2; }
-  .shot-tall-left,
-  .shot-tall-right { grid-row: span 2; }
-}
 }
 
 /* Снимок — это кнопка: по нажатию открывается крупный просмотр.
