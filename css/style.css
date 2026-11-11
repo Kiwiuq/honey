@@ -156,7 +156,7 @@ section {
 }
 
 @media (min-width: 768px) {
-  .hero-photo { background: url("../img/gallery/hives-closeup.jpg") center / cover; }
+  .hero-photo { background: url("../img/gallery/field.jpg") center 55% / cover; }
 }
 
 /* Затемнение: в центре — под текст, внизу переходим уже не в чёрный,
