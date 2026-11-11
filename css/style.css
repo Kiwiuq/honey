@@ -321,25 +321,23 @@ section {
 
 /* Три снимка: широкий сверху, два высоких по бокам под ним.
    На компьютере они выстраиваются в один ряд — трёхчастная витрина. */
-.gallery {
+gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: clamp(160px, 38vw, 300px);
   gap: 8px;
-  max-width: 920px;      /* ограничиваем ширину и центрируем блок */
-  margin: 0 auto;
 }
 
 @media (min-width: 721px) {
   .gallery {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-auto-rows: clamp(220px, 22vw, 320px);
     gap: 12px;
   }
 
-  /* Первые три снимка — по трети ширины, два последних — по половине */
-  .shot:nth-child(-n+3) { grid-column: span 2; }
-  .shot:nth-child(n+4)  { grid-column: span 3; }
+  .shot-wide      { grid-column: span 2; grid-row: span 2; }
+  .shot-tall-left,
+  .shot-tall-right { grid-row: span 2; }
 }
 }
 
